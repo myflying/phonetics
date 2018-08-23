@@ -1,0 +1,227 @@
+page {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+
+.content-view {
+  width: 100%;
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-view {
+  width: 100%;
+  height: 380rpx;
+}
+
+.video-play {
+  width: 100%;
+  height: 100%;
+}
+
+.pay-info {
+  width: 100%;
+  height: 330rpx;
+  background: #fff;
+}
+
+.buy-count {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left: 25rpx;
+  margin-top: 25rpx;
+  margin-bottom: 20rpx;
+}
+
+.buy-normal {
+  color: #999;
+  font-size: 26rpx;
+}
+
+.buy-user {
+  color: #f00;
+  font-size: 26rpx;
+}
+
+.coach-title {
+  color: #333;
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-left: 25rpx;
+}
+
+.price-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.login-btn {
+  width: 100%;
+  height: 80rpx;
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  left: 0;
+  top: 0;
+}
+
+.price-view {
+  margin-left: 25rpx;
+  margin-top: 20rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.now-price {
+  color: #f00;
+  font-size: 42rpx;
+  font-weight: 600;
+}
+
+.old-price {
+  color: #999;
+  font-size: 36rpx;
+  margin-left: 50rpx;
+  text-decoration: line-through;
+}
+
+.price-btn {
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2%;
+  margin-top: 25rpx;
+  justify-content: space-around;
+}
+
+.onetoone-btn {
+  width: 336rpx;
+  height: 80rpx;
+  line-height: 76rpx;
+  border-radius: 20px;
+  background: #f6ac70;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.study-btn {
+  width: 336rpx;
+  height: 80rpx;
+  line-height: 76rpx;
+  border-radius: 20px;
+  background: #4bb3d9;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+button, button::after {
+  border: 0;
+}
+
+.service-desp {
+  width: 100%;
+  height: 78rpx;
+  display: flex;
+  background: #f8f8f8;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10rpx;
+}
+
+.left-icon {
+  width: 10rpx;
+  height: 38rpx;
+  background: #30c065;
+}
+
+.service-txt {
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-left: 25rpx;
+}
+
+.desp-content {
+  width: 96%;
+  min-height: 260rpx;
+  margin-left: 4%;
+  margin-top: 30rpx;
+}
+
+.desp-txt {
+  font-size: 28rpx;
+  color: #777;
+  line-height: 45rpx;
+}
+
+.content-item {
+  width: 96%;
+  height: 150rpx;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2%;
+  justify-content: flex-start;
+}
+
+.content-user-head {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 12rpx;
+}
+
+.content-left {
+  width: 20%;
+}
+
+.content-right {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.right-top {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+
+.right-bottom {
+  width: 80%;
+  font-size: 28rpx;
+  color: #000;
+}
+
+.nick-name {
+  font-size: 28rpx;
+  color: #838383;
+}
+.add-time {
+  font-size: 26rpx;
+  color: #838383;
+  margin-right: 12rpx;
+}
+
+.user-content {
+  font-size: 30rpx;
+  color: #333;
+  height: 50rpx;
+}

@@ -1,0 +1,21 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <text class='top-txt'>1/4</text>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>什么是音标?</view>
+    <view class='vowel-letter'>
+        <text class='phonetic-remark'>
+          音标是记录音素的符号，是用来标注单词读音的，它帮助我们正确的读出英文单词；和我们中文的拼音功能相同。但是中文的拼音是由声母和韵母组成的，音标是由元音和辅音构成。
+        </text>
+        <image class='phonetic-simple' src='../../images/phonetic_simple.png'></image>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>
+

@@ -1,0 +1,16 @@
+<!--pages/myorder/myorder.wxml-->
+<view class='content-view'>
+  <view class='order-item' wx:for='{{orders}}' wx:key='{{key}}' wx:item='{{item}}'>
+    <view class='item-top'>
+      <text>订单号：{{item.order_sn}}</text>
+      <text class='order-time'>{{item.time}}</text>
+    </view>
+    <view class='item-bottom'>
+      <view>
+        <text class='order-title'>{{item.title}}</text>
+        <text class='order-price'>¥{{item.money}}</text>
+      </view>
+      <text class='order-status'>订单状态：{{item.status==0?'未支付':'支付成功'}}</text>
+    </view>
+  </view>
+</view>

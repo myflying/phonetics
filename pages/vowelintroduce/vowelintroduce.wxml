@@ -1,0 +1,45 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <text class='top-txt'>3/4</text>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>元音(20个)</view>
+    <view class='vowel-letter'>
+        <text>单元音</text>
+        <view class='vowel-top'>
+            <view class='vowel-item'>
+              <text>前元音：</text>
+              <text>/i:/  /ɪ/ /e/ /æ/</text>
+            </view>
+            <view class='vowel-item'>
+              <text>中元音：</text>
+              <text>/ə/ /ɜ:/ /ʌ/</text>
+            </view>
+            <view class='vowel-item'>
+              <text>后元音：</text>
+              <text>/ɑ://ɒ/ /ɔ:/ /ʊ/ /u:/</text>
+            </view>
+        </view>
+
+        <text class='shuang-txt'>双元音</text>
+        <view class='vowel-bottom'>
+            <view class='vowel-item'>
+              <text>合口双元音：</text>
+              <text>/eɪ/ /aɪ/ /ɔɪ/ /aʊ//əʊ/</text>
+            </view>
+            <view class='vowel-item'>
+              <text>集中双元音：</text>
+              <text>/ɪə/  /eə/ /ʊə/ </text>
+            </view>
+        </view>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>
+

@@ -1,0 +1,23 @@
+<view class='unit-list'>
+  <block wx:for='{{weikelist}}' wx:key='id' wx:for-item="item">
+    <view class='unit-item' bindtap='weikedetail' data-id='{{item.id}}' data-vip='{{item.is_vip}}'>
+      <view class='vip-view'>
+          <image class='unit-img' src='{{item.img}}' mode='aspectFill'></image>
+          <image wx:if='{{!paid_user && item.is_vip == 1}}' class='vip-img' src='../../images/vip_icon.png'></image>
+      </view>
+      <text class='unit-title'>{{item.title}}</text>
+      <view class='unit-view'>
+        <view class='buy-info'>
+          <image class='buy-user-head' src='../../images/buy_user_head.png'></image>
+          <text class='buy-count'>{{item.user_num}}</text>
+          <text class='buy-txt'>人已购买</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!--弹出支付层-->
+<view wx:if='{{show_dialog}}'>
+    <include src='../price_dialog/price_dialog.wxml'/>
+</view>

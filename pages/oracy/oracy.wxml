@@ -1,0 +1,63 @@
+<view class='tabwarpper'>
+  <view class='topTabSwiper'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>说英语</view>
+    <view class='line'></view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>听英语</view>
+  </view>
+</view>
+
+<view class='vowel-warpper'>
+  <swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange">
+    <swiper-item>
+      <scroll-view class='swiper_con' scroll-y='true'>
+
+        <view class='type-top-view'>
+          <view class='type-top-left'>
+            <image class='type-video-img' src='../../images/type_video_icon.png'></image>
+            <text class='type-video-txt'>经典影视</text>
+          </view>
+          <view class='type-top-right'>
+            <text class='type-more-txt'>更多</text>
+            <image class='type-more-img' src='../../images/more_icon.png'></image>
+          </view>
+        </view>
+
+        <view class='type-banner'>
+          <view class='banner-positon'>
+            <image class='type_banner-img' src='../../images/type_top_def.png'></image>
+            <view class='banner-play-info'>
+              <image class='play-count-img' src='../../images/play_count_icon.png'></image>
+              <text class='play-count-txt'>1280次</text>
+            </view>
+            <view class='banner-data-info'>
+              <text class='banner-data-txt'>更新</text>
+              <text class='banner-data-txt'>2018年7月10日</text>
+            </view>
+          </view>
+          <view class='type-banner-txt'>
+            <text class='type-banner-name'>功夫熊猫3 英文版</text>
+          </view>
+        </view>
+
+        <view class='listen-list'>
+          <block wx:for='{{listenlist}}' wx:key='id' wx:for-item="item">
+            <view class='listen-item' bindtap='createDetail' data-id='{{item.id}}'>
+              <view class='listen-positon'>
+                <image class='listen-img' src='../../images/listen_def.png'></image>
+                <view class='listen-info'>
+                  <image class='play-count-img' src='../../images/play_count_icon.png'></image>
+                  <text class='play-count-txt'>1280次</text>
+                </view>
+              </view>
+              <text class='listen-title'>微课标题测试</text>
+            </view>
+          </block>
+        </view>
+
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <view class='swiper_con'>welcome come to 2</view>
+    </swiper-item>
+  </swiper>
+</view>

@@ -1,0 +1,37 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+      <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>3</text>
+      <text class='top-total-txt'>/9</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>我们一起来读吧!</view>
+    <view class='vowel-progress'>
+      <text>跟进进度：</text>
+      <text>{{read_count}}</text>
+      <text>/</text>
+      <text>3</text>
+      <view class='count-progress'>
+        <view class='count-progress-index' style='width:{{read_num}}rpx'></view>
+      </view>
+    </view>
+    <view class='vowel-letter'>
+        <image class='vowel-img' src='{{voice_img_path}}'></image>
+    </view>
+    <view class='letter-play'>
+        <image class='play-img' bindtap='readCount' src='{{video_play_img}}'></image>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>
+

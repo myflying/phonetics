@@ -1,0 +1,45 @@
+<view class='user-info'>
+  <image class='user-head' src='{{user_head}}'></image>
+  <view class='user-login' wx:if='{{is_login}}'>
+    <text class='user-name'>{{nick_name}}</text>
+  </view>
+  <view wx:if='{{!is_login}}' class='login-btn-view'>
+    <button wx:if='{{canIUse}}' class='login-btn' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-stype='0'>请登录</button>
+  </view>
+</view>
+
+<view class='order-top'>
+  <view class='vip-wrapper'>
+    <view class='vip' bindtap='openVip'> 
+      <view class='vip-left'>
+        <image class='open-vip-img' src='../../images/open_vip_icon.png'></image>
+        <text class='open-vip-txt'>{{paid_user?"会员权益":"开通会员"}}</text>
+      </view>
+      <image class='more' src='../../images/more_icon.png'></image>
+    </view>
+    <button class='login-vip-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-stype='1'></button>
+  </view>
+  <view class='vip-wrapper'>
+    <view class='order' bindtap='myorder'>
+      <view class='order-left'>
+        <image class='order-img' src='../../images/my_order_icon.png'></image>
+        <text class='order-txt'>我的订单</text>
+      </view>
+      <image class='more' src='../../images/more_icon.png'></image>
+    </view>
+    <button class='login-vip-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-stype='2'></button>
+  </view>
+</view>
+
+<view class='order-bottom' bindtap='serviceNumber'>
+  <view class='vowel-left'>
+    <image class='vowel-error-img' src='../../images/vowel_error_icon.png'></image>
+    <text class='vowel-error-txt'>客服微信号</text>
+  </view>
+  <image class='more' src='../../images/more_icon.png'></image>
+</view>
+
+<!--弹出支付层-->
+<view wx:if='{{show_dialog}}'>
+    <include src='../price_dialog/price_dialog.wxml'/>
+</view>

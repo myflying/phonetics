@@ -1,0 +1,41 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+        <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>1</text>
+      <text class='top-total-txt'>/9</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>{{current_title}}</view>
+    <view class='vowel-letter'>
+      <view class='letter-left'>
+        <view class='left-top'>
+          <view>
+              <rich-text nodes='{{left_word}}'></rich-text>
+          </view>
+          <view class='right-view'>
+              <rich-text nodes='{{right_word}}'></rich-text>
+          </view>
+        </view>
+        <view class='left-bottom'>
+          <text>{{vowel_cn}}</text>
+        </view>
+      </view>
+      <view class='letter-right'>
+        <image class='right-play-img' src='{{play_state_img}}' bindtap='playVowel'></image>
+      </view>
+    </view>
+    <view class='letter-view'>
+      <image class='letter-bg' src='{{vowel_bg}}'></image>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>

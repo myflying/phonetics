@@ -1,0 +1,50 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+        <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>2</text>
+      <text class='top-total-txt'>/8</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>单词对比练习</view>
+    <view class='vowel-compare'>
+      <text>{{left_word}}</text>
+      <text>{{right_word}}</text>
+    </view>
+    
+      <view class='group-item'>
+
+        <view class='left-view'>
+          <block wx:for='{{leftarray}}' wx:key='{{id}}' wx:item='{{item}}'>
+            <view class='{{cindex==index?"group-checked":"group-normal"}}' bindtap='chooseVowel' data-i='{{index}}'>
+              <rich-text nodes="{{item.new_word}}">
+              </rich-text>
+              <image  wx:if='{{cindex==index}}' class='vowel-play-img' src='{{play_state_img}}'></image>
+            </view>
+          </block>
+        </view>
+
+        <view class='right-view'>
+          <block wx:for='{{rightarray}}' wx:key='{{id}}' wx:for-index='rindex' wx:item='{{item}}'>
+            <view class='{{rightindex==rindex?"group-checked":"group-normal"}}' bindtap='chooseRightVowel' data-i='{{rindex}}'>
+              <rich-text nodes="{{item.new_word}}">
+              </rich-text>
+              <image  wx:if='{{rightindex==rindex}}' class='vowel-play-img' src='{{play_state_img}}'></image>
+            </view>
+          </block>
+        </view>
+
+      </view>
+
+    </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>

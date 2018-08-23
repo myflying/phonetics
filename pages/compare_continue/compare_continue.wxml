@@ -1,0 +1,53 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+        <view class='progress-index' style='width:{{current_num*50}}rpx'></view>
+    </view>
+    <view>
+      <text class='top-txt'>{{current_num}}</text>
+      <text class='top-total-txt'>/8</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name' wx:if='{{!is_submit}}'>巩固练习</view>
+    <view class='read-vowel' wx:if='{{!is_submit}}'>听录音选择正确的单词</view>
+    <view wx:if='{{!is_submit}}'>
+      <image class='read-play-img' src='{{play_state_img}}' bindtap='playVowel'></image>
+    </view>
+    <view class='vowel-letter'>
+      <view wx:for='{{grouparray}}' wx:key='{{id}}' wx:item='{{item}}'>
+        <view class='group-item'>
+          <block wx:if='{{!is_submit}}'>
+            <view class='group-left'>
+              <text>{{item.name}}</text>
+            </view>
+            <view class='group-right'>
+                <image class='normal-options' src='{{item.checked == 1 ? options_checked:options_normal}}' bindtap='chooseoptions' data-index='{{index}}'></image>
+            </view>
+          </block>
+          <block wx:if='{{is_submit && cindex == index}}'>
+            <block wx:if='{{item.is_true == 1}}'>
+              <view class='result-view'>
+                <image class='result-img' src='../../images/result_yes.png'></image>
+                <text class='result-txt'>完全正确</text>
+              </view>
+            </block>
+            <block wx:if='{{item.is_true == 0}}'>
+              <view class='result-view'>
+                <image class='result-img' src='../../images/result_no.png'></image>
+                <text class='result-txt'>回答错误</text>
+              </view>
+            </block>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>{{left_txt}}</button>
+    <button class='commit-btn' bindtap='nextStep'>{{right_txt}}</button>
+  </view>
+</view>

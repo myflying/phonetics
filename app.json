@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/myorder/myorder",
+    "pages/vowel_six/vowel_six",
+    "pages/vowel_five/vowel_five",
+    "pages/coach/coach",
+    "pages/vowel_four/vowel_four",
+    "pages/vowel_three/vowel_three",
+    "pages/vowel_second/vowel_second",
+    
+    "pages/vowel/vowel",
+    "pages/myinfo/myinfo",
+    "pages/vowel_first/vowel_first",
+    "pages/consonant/consonant",
+    "pages/vowelintroduce/vowelintroduce",
+    "pages/category/category",
+    "pages/whatphonetic/whatphonetic",
+    "pages/oracy/oracy",
+    "pages/weike/weike",
+    "pages/wkhome/wkhome",
+    "pages/weikedetail/weikedetail",
+    "pages/price_dialog/price_dialog",
+    "pages/compare_result/compare_result",
+    "pages/compare_continue/compare_continue",
+    "pages/compare_practice/compare_practice",
+    "pages/compare_first/compare_first",
+    "pages/vowel_nine/vowel_nine",
+    "pages/vowel_eight/vowel_eight",
+    "pages/vowel_seven/vowel_seven",
+    
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#32c066",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/home_normal.png",
+        "selectedIconPath": "images/home_selected.png",
+        "text": "音标学习"
+      },
+      {
+        "pagePath": "pages/coach/coach",
+        "iconPath": "images/coach_normal.png",
+        "selectedIconPath": "images/coach_selected.png",
+        "text": "1对1辅导"
+      },
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "iconPath": "images/my_info_normal.png",
+        "selectedIconPath": "images/my_info_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+
+  "plugins": {
+    "WechatSI": {
+      "version": "0.1.0",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
+}

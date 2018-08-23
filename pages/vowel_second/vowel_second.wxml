@@ -1,0 +1,46 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+      <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>2</text>
+      <text class='top-total-txt'>/9</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>{{current_title}}</view>
+    <view class='vowel-letter'>
+      <view class='topTabSwiper'>
+        <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>
+           外教师范发音
+          <view wx:if='{{currentData == 0}}' class='tab_line'></view>
+        </view>
+        <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>
+          发音口型舌位
+          <view wx:if='{{currentData == 1}}' class='tab_line'></view>
+        </view>
+      </view>
+      
+      <video wx:if='{{currentData == 0}}' id='vowel_video' objectFit='fill' class='video-play' src="{{vowel_video_src}}"></video>
+  
+        <view class='swiper_con' wx:if='{{currentData == 1}}'>
+          <image class='mouth-img' src='{{mouth_img}}'></image>
+        </view>
+          
+    </view>
+    <view class='letter-view'>
+      <view class='letter-view-text'>
+        <image class='horn-img' wx:if='{{currentData == 0}}' src='{{audio_play_img}}'></image>
+        <text class='letter-remark' decode="{{true}}" bindtap='playChinese'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{vowel_desp}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>

@@ -1,0 +1,100 @@
+@import "../price_dialog/price_dialog.wxss";
+
+page {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+}
+
+.unit-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 1%;
+  margin-top: 12rpx;
+}
+
+.unit-item {
+  width: 46%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  background-color: #fff;
+  box-shadow: 0px 2px 1px #ccc;
+  margin: 1%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.unit-view {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.vip-view {
+  width: 96%;
+  height: 108px;
+  position: relative;
+}
+
+.unit-img {
+  width: 96%;
+  height: 108px;
+  margin-top: 10rpx;
+  margin-left: 2%;
+  margin-right: auto;
+  margin-bottom: 0px;
+  border-radius: 6px;
+}
+
+.vip-img {
+  width: 82rpx;
+  height: 38rpx;
+  position: absolute;
+  top:0;
+  right: 0;
+}
+
+.unit-title {
+  height: 40rpx;
+  font-size: 25rpx;
+  margin-top: 12rpx;
+  margin-bottom: 12rpx;
+}
+
+.buy-info {
+  height: 60rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.buy-user-head {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.buy-count {
+  color: #ff5555;
+  font-size: 10pt;
+  margin-left: 10rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+}
+
+.buy-txt {
+  color: #aaa;
+  font-size: 10pt;
+  height: 30rpx;
+  line-height: 30rpx;
+}

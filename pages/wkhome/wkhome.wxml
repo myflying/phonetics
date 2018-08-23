@@ -1,0 +1,16 @@
+<view class='unit-list'>
+    <block wx:for='{{unitarray}}' wx:key='id' wx:for-item="item">
+      <view class='unit-item' bindtap='createDetail' data-id='{{item.id}}' bindtap='weikeUnit'>
+          <image class='wk-img' src='{{item.img}}' mode='aspectFill'></image>
+          <text class='wk-title'>{{item.title}}</text>
+          <view class='unit-view'>
+            <view class='buy-info'>
+              <image class='buy-user-head' src='../../images/buy_user_head.png'></image>
+              <text class='buy-left-txt'>总共</text>
+              <text class='buy-count'>{{item.unit}}</text>
+              <text class='buy-txt'>单元</text>
+            </view>
+          </view>
+      </view>
+    </block>
+  </view>

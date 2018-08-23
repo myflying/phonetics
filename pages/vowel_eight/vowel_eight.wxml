@@ -1,0 +1,43 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+      <view class='progress-index' style='width:{{progress_width}}rpx;'></view>
+    </view>
+    <view>
+      <text class='top-txt'>{{top_num}}</text>
+      <text class='top-total-txt'>/9</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>练习巩固</view>
+    <view class='read-vowel'>请选择发出{{current_title}}的单词</view>
+    <scroll-view class='vowel-letter' scroll-y style='overflow: hidden;'>
+      <view class='group-item' wx:for='{{testarray}}' wx:key='{{id}}' wx:item='{{item}}'>
+        <view class='group-left'>
+          <text>{{item.word}}</text>
+          <image class='vowel-play-img' bindtap='playWord' src='{{cindex == index ?play_img:normal_play}}' data-voice='{{item.mp3}}' data-index='{{index}}'></image>
+        </view>
+        <view class='group-right'>
+          <block wx:if='{{!is_submit}}'>
+            <image class='normal-options' src='{{item.checked == 1 ? options_checked:options_normal}}' bindtap='chooseoptions' data-i='{{index}}'></image>
+          </block>
+          <block wx:if='{{is_submit}}'>
+            <block wx:if='{{item.is_true == 1}}'>
+              <image class='normal-options' src='{{options_checked}}'></image>
+            </block>
+            <block wx:if='{{item.is_true == 0}}'>
+              <image class='normal-options' src='{{item.checked == 1 ? options_error:options_normal}}'></image>
+            </block>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>{{pre_txt}}</button>
+    <button class='next-btn' bindtap='submitTest'>{{submit_txt}}</button>
+  </view>
+</view>

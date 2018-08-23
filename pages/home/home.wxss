@@ -1,0 +1,70 @@
+
+page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
+}
+
+.swiper-view {
+  width: 690rpx;
+  height: 286rpx;
+  margin-top: 30rpx;
+}
+
+.slide-image {
+  margin: auto;
+  display: block;
+  clear: both;
+  width: 670rpx;
+  height: 284rpx;
+}
+
+.model-line-view {
+  width: 690rpx;
+  height: 284rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.top-left {
+  width: 345rpx;
+  height: 284rpx;
+  position: relative;
+}
+
+.top-right {
+  width: 345rpx;
+  height: 284rpx;
+  position: relative;
+}
+
+.login-btn {
+  width: 345rpx;
+  height: 284rpx;
+  position: absolute;
+  background: rgba(255, 255, 255, 0);
+  left: 0;
+  top: 0;
+}
+
+.login-btn::after{
+  border: 0;
+}
+
+.model-line-view image {
+  width: 329rpx;
+  height: 284rpx;
+}
+
+.bottom-view {
+  margin-top: 30rpx;
+}
+
+.solgan-img {
+  width: 524rpx;
+  height: 92rpx;
+}

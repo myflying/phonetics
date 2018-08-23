@@ -1,0 +1,50 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+      <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>4</text>
+      <text class='top-total-txt'>/9</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>{{current_vowel}}发音组合</view>
+    <scroll-view class='vowel-letter' scroll-y style='overflow: hidden;'>
+        <view wx:for='{{grouparray}}' wx:key='{{id}}' wx:item='{{item}}'>
+          <view class='group-item'>
+              <text class='group-vowel'>{{item.name}}</text>
+              <view class='item-group'>
+                <view class='group-left' bindtap='readVowel' data-index='{{index}}' data-vowel='{{item.data[0].mp3}}'>
+                 
+                  <rich-text class='vowel-txt' nodes="{{item.data[0].word}}"></rich-text>
+                  <block wx:if='{{index == cindex}}'>
+                      <image class='vowel-play-img'  src='../../images/vowel_playing.png'></image>
+                  </block>
+                  <block wx:if='{{index != cindex}}'>
+                      <image class='vowel-play-img'  src='../../images/vowel_play.png'></image>
+                  </block>
+                </view>
+                <view class='group-right' wx:if='{{item.data[1].word}}' bindtap='rightReadVowel' data-index='{{index}}' data-vowel='{{item.data[1].mp3}}'>
+                  <rich-text class='vowel-txt' nodes="{{item.data[1].word}}"></rich-text>
+                  <block wx:if='{{index == rindex}}'>
+                      <image class='vowel-play-img'  src='../../images/vowel_playing.png'></image>
+                  </block>
+                  <block wx:if='{{index != rindex}}'>
+                      <image class='vowel-play-img'  src='../../images/vowel_play.png'></image>
+                  </block>
+                </view>
+              </view>
+          </view>
+        </view>
+    </scroll-view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>
+

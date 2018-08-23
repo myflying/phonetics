@@ -1,0 +1,77 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <text class='top-txt'>4/4</text>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>辅音(28个)</view>
+    <scroll-view class='vowel-letter' scroll-y='true'>
+        <view class='consonant-title'><text class='title-view'>爆破音</text></view>
+        <view class='vowel-bottom'>
+            <view class='vowel-item'>
+              <text>清辅音：</text>
+              <text>/p/ /t//k/</text>
+            </view>
+            <view class='vowel-item'>
+              <text>浊辅音：</text>
+              <text>/b/ /d/ /g/</text>
+            </view>
+        </view>
+
+        <view class='consonant-title'><text class='title-view'>摩擦音</text></view>
+        <view class='vowel-bottom'>
+            <view class='vowel-item'>
+              <text>清辅音：</text>
+              <text>/f/ /s/ /θ/ /∫/ /h/</text>
+            </view>
+            <view class='vowel-item'>
+              <text>浊辅音：</text>
+              <text>/v/ /z/ /ð/ /ʒ/ /r/</text>
+            </view>
+        </view>
+
+        <view class='consonant-title'><text class='title-view'>破擦音</text></view>
+        <view class='vowel-bottom'>
+            <view class='vowel-item'>
+              <text>清辅音：</text>
+              <text>/ts/ /tʃ/ /tr/</text>
+            </view>
+            <view class='vowel-item'>
+              <text>浊辅音：</text>
+              <text>/ɪə/  /eə/ /ʊə/ </text>
+            </view>
+        </view>
+
+        <view class='consonant-title'><text class='title-view'>鼻音</text></view>
+        <view class='vowel-single'>
+            <view class='vowel-item'>
+              <text>鼻音：</text>
+              <text>/m/ /n/ /ŋ/</text>
+            </view>
+        </view>
+
+        <view class='consonant-title'><text class='title-view'>舌侧音</text></view>
+        <view class='vowel-single'>
+            <view class='vowel-item'>
+              <text>舌侧音：</text>
+              <text>/l/ </text>
+            </view>
+        </view>
+
+        <view class='consonant-title'><text class='title-view'>半元音</text></view>
+        <view class='vowel-single'>
+            <view class='vowel-item'>
+              <text>半元音：</text>
+              <text>/j/ /w/ </text>
+            </view>
+        </view>
+    </scroll-view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='again-btn' bindtap='trainAgain'>完成</button>
+  </view>
+</view>
+

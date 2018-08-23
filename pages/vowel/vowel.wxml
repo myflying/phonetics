@@ -1,0 +1,31 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <text class='top-txt' bindtap='introduce'>音标介绍</text>
+  </view>
+  
+  <view class='vowel-warpper' wx:for='{{vowelarray}}' wx:key='{{id}}' wx:for-index="yindex">
+    <view class='vowel-name'>{{vowel_titles[yindex]}}</view>
+    <view class='vowel-item'>
+        <view class='vowel-letter' wx:key='{{id}}' wx:for='{{item}}' wx:item='{item}'>
+          <view class='vowel-warpper'>
+            <view wx:if='{{item.vs == 0}}' class='letter-txt' bindtap='voweldetail' data-item='{{item}}' data-yindex='{{yindex}}'>
+              {{item.name}}
+              <image class='vip-img' wx:if='{{item.is_vip == 1 && !paid_user }}' src='../../images/vip_icon.png'></image>
+            </view>
+            <view wx:if='{{item.vs > 0}}' class='letter-compare' bindtap='voweldetail' data-item='{{item}}' data-yindex='{{yindex}}'>
+                VS
+              <image class='vip-compare-img' wx:if='{{item.is_vip == 1 && !paid_user}}' src='../../images/vip_icon.png'></image>
+            </view>
+            <text class='vowel-show'>{{item.name}}</text>
+          </view>
+        </view>
+        
+    </view>
+  </view>
+</view>
+
+<!--弹出支付层-->
+<view wx:if='{{show_dialog}}'>
+    <include src='../price_dialog/price_dialog.wxml'/>
+</view>

@@ -1,0 +1,22 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <text class='top-txt'>2/4</text>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>音标分哪几类？</view>
+    <view class='vowel-letter'>
+        <text class='phonetic-remark'>
+          音标分为元音和辅音。英语中共有48个音标，其中元音20个，辅音28个。
+元音就像汉语拼音中的韵母，辅音就像汉语拼音中的声母，元音、辅音组合可以拼出任何一个英语单词。
+        </text>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>
+

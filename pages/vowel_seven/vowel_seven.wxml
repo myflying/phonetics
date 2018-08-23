@@ -1,0 +1,46 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+      <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>7</text>
+      <text class='top-total-txt'>/9</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-name'>句子练习</view>
+    <view class='vowel-letter' scroll-y style='overflow: hidden;'>
+      <view class='group-item {{cindex == index ? "vowel-checked":""}}' bindtap='phraseChecked' wx:for='{{sensarray}}' wx:key='{{id}}' wx:item='{{item}}' data-index='{{index}}' data-item='{{item}}'>
+        <rich-text  class='vowel-top' nodes="{{item.new_itemsens}}">
+        </rich-text>
+        <view class='vowel-bottom'>
+            <text>{{item.en}}</text>
+        </view>
+      </view>
+      <view class='play-result'>
+        <view class='play-warpper'>
+          <image class='audio-play' src='{{audio_play_img}}' bindtap='readPhrase'></image>
+          <image class='tape' src='{{tape_img}}' bindtap='record'></image>
+          <image class='play-tape' src='{{play_tape_img}}' bindtap='playTape'></image>
+        </view>
+        <view class='tape-result'>
+            <text class='result-txt'>评测结果：</text>
+            <block wx:if='{{is_first}}'>
+              <text class='test-txt'>未评测</text>
+            </block>
+            <block wx:if='{{!is_first}}'>
+              <image class='tape-result-img' src='{{tape_result}}'></image>
+            </block>
+          </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>

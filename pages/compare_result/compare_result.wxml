@@ -1,0 +1,16 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png'></image>
+    <text class='top-txt'>音标介绍</text>
+  </view>
+
+  <view class='vowel-warpper'>
+    <image class='correct-img' src='../../images/answer_yes.png'></image>
+    <view class='read-vowel'>完全正确</view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn'>上一步</button>
+    <button class='next-group-btn'>下一组</button>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<!--弹窗下载APP-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" bindtap='hideModal' wx:hidden='{{is_show}}'></view>
+<view class="modal-dialog" wx:hidden="{{is_show}}">
+  <view class="modal-title">
+    <image class='price-title-img' src='../../images/price_title.png'></image>
+  </view>
+  <view class="modal-content">
+    <view class='price-item' wx:for='{{viparray}}' wx:key='{{id}}' wx:item='{{item}}'>
+        <view class='price-left'>
+            <view class='price-title'>
+                <text class='title-top'>{{item.name}}</text>
+                <text class='title-bottom'>{{item.desp}}</text>
+            </view>
+            <view class='item-price'>
+                <text class='price-top'>¥{{item.price}}</text>
+                <text class='price-bottom'>原价¥{{item.orig}}</text>
+            </view>
+        </view>
+        <view class='price-right'>
+            <image class='vip-option-img' bindtap='vipChoose' data-i='{{index}}' src='{{cindex == index ? vip_options_checked:vip_options_normal}}'></image>
+        </view>
+    </view>
+  </view>
+  <view class="modal-footer">
+      <button class='config-btn' bindtap='pay'>确 认</button>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view class='video-top'>
+  <video id='vowel_video' objectFit='fill' class='video-play' src="{{vowel_video_src}}"></video>
+</view>
+<scroll-view>
+  <view class='buy-view'>
+    <view class='buy-info'>
+      <text class='buy-count'>{{user_num}}</text>
+      <text class='buy-txt'>人已购买</text>
+    </view>
+  </view>
+  <view class='line-view'></view>
+  <view class='weike-title-info'>
+    <text class='weike-title'>{{weike_title}}</text>
+    <view class='price-view'>
+      <text class='now-price'>会员价¥{{current_price}}</text>
+      <text class='old-price'>会员原价：¥{{old_price}}</text>
+    </view>
+  </view>
+  <view class='content-title-view'>
+    内容介绍
+  </view>
+  <view class='content-view'>
+    <text class='content-txt'>{{content_desp}}</text>
+  </view>
+</scroll-view>
+
+<view class='pay-view' wx:if='{{false}}'>
+  <text>立即购买</text>
+</view>

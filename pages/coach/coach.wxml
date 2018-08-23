@@ -1,0 +1,51 @@
+<view class='video-view'>
+  <video id='vowel_video' objectFit='fill' class='video-play' src="{{video_url}}"></video>
+</view>
+<view class='content-view' scroll-y>
+  <view class='pay-info'>
+    <view class='buy-count'>
+      <text class='buy-normal'>已有</text>
+      <text class='buy-user'>{{user_count}}</text>
+      <text class='buy-normal'>人购买学习</text>
+    </view>
+    <text class='coach-title'>{{coach_title}}</text>
+    <view class='price-view'>
+      <text class='now-price'>¥{{now_price}}</text>
+      <text class='old-price'>原价：¥{{old_price}}</text>
+    </view>
+    <view class='price-wrapper'>
+      <view class='price-btn'>
+        <button class='onetoone-btn' bindtap='pay' data-gid='{{one_gid}}'>{{one_good_name}}</button>
+        <button class='study-btn' bindtap='pay' data-gid='{{two_gid}}'>{{two_good_name}}</button>
+      </view>
+      <button class='login-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-type='2'></button>
+    </view>
+  </view>
+  <view class='service-desp'>
+    <view class='left-icon'></view>
+    <text class='service-txt'>1对1超值服务介绍</text>
+  </view>
+  <view class='desp-content'>
+    <rich-text class='desp-txt' nodes='{{desp_content}}'></rich-text>
+  </view>
+  <view class='service-desp'>
+    <view class='left-icon'></view>
+    <text class='service-txt'>学员反馈</text>
+  </view>
+  <block wx:for='{{commentarray}}' wx:key='{{key}}' wx:item='{{item}}'>
+  <view class='content-item'>
+    <view class='content-left'>
+      <image class='content-user-head' src='{{item.avatar}}'></image>
+    </view>
+    <view class='content-right'>
+      <view class='right-top'>
+        <text class='nick-name'>{{item.nick_name}}</text>
+        <text class='add-time'>{{item.date}}</text>
+      </view>
+      <view class='right-bottom'>
+          {{item.comment}}
+      </view>
+    </view>
+  </view>
+  </block>
+</view>

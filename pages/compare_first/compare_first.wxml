@@ -1,0 +1,94 @@
+<view>
+  <view class='top-view'>
+    <image class='top-img' src='../../images/vowel_top_icon.png' bindtap='to_home'></image>
+    <view class='progress'>
+        <view class='progress-index'></view>
+    </view>
+    <view>
+      <text class='top-txt'>1</text>
+      <text class='top-total-txt'>/8</text>
+    </view>
+  </view>
+
+  <view class='vowel-warpper'>
+    <view class='vowel-letter'>
+      <view class='toptabwarpper'>
+        <view class='topTabSwiper'>
+          <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>对比</view>
+          <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>{{self_vowel}}发音</view>
+          <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>{{vs_vowel}}发音</view>
+        </view>
+      </view>
+
+        <view class='swiper_con' wx:if='{{currentData == 0}}'>
+            <view class='group-item'>
+              <view class='group-left {{voice_left_check? "voice-checked":"voice-normal"}}' data-vindex='1' bindtap='voiceClick'>
+                <view class='vowel-top'>{{self_vowel}}</view>
+                <view class='vowel-bottom'>
+                  {{self_vowel_hint}}
+                </view>
+              </view>
+              <view class='group-left {{voice_right_check? "voice-checked":"voice-normal"}}'  data-vindex='2' bindtap='voiceClick'>
+                <view class='vowel-top'>{{vs_vowel}}</view>
+                <view class='vowel-bottom'>
+                  {{vs_vowel_hint}}
+                </view>
+              </view>
+            </view>
+        </view>
+        
+        <view class='swiper_common' wx:if='{{currentData == 1}}'>
+          <view class='self_topTabSwiper'>
+            <view class='self_tab  {{self_currentData == 0 ? "self_tabBorer" : ""}}' data-current="0" bindtap='self_checkCurrent'>
+              海外示范发音
+              <view wx:if='{{self_currentData == 0}}' class='self_tab_line'></view>
+            </view>
+            <view class='self_tab  {{self_currentData == 1 ? "self_tabBorer" : ""}}' data-current="1" bindtap='self_checkCurrent'>
+              发音口型舌位
+              <view wx:if='{{self_currentData == 1}}' class='self_tab_line'></view>
+            </view>
+          </view>
+          
+          <view wx:if='{{self_currentData == 0}}' class='self_swiper_con'>
+            <video id='vowel_video' objectFit='fill' class='video-play' src="{{vowel_video_src}}"></video>
+          </view>
+          <view wx:if='{{self_currentData == 1}}'>
+            <image class='mouth-img' src='{{mouth_img}}'></image>
+          </view>
+        </view>
+        <view class='swiper_common' wx:if='{{currentData == 2}}'>
+          <view class='vs_topTabSwiper'>
+            <view class='vs_tab  {{vs_currentData == 0 ? "vs_tabBorer" : ""}}' data-current="0" bindtap='vs_checkCurrent'>
+              海外示范发音
+              <view wx:if='{{vs_currentData == 0}}' class='vs_tab_line'></view>
+            </view>
+            <view class='vs_tab  {{vs_currentData == 1 ? "vs_tabBorer" : ""}}' data-current="1" bindtap='vs_checkCurrent'>
+              发音口型舌位
+              <view wx:if='{{vs_currentData == 1}}' class='vs_tab_line'></view>
+            </view>
+          </view>
+          
+          <view wx:if='{{vs_currentData == 0}}' class='vs_swiper_con'>
+            <video id='vowel_video' objectFit='fill' class='video-play' src="{{vs_vowel_video_src}}"></video>
+          </view>
+          <view wx:if='{{vs_currentData == 1}}' class='swiper_con'>
+            <image class='mouth-img' src='{{vs_mouth_img}}'></image>
+          </view>
+
+        </view>
+    </view>
+    <view class='play-result'>
+        <view class='play-warpper' wx:if='{{currentData == 0 }}'>
+            <image class='audio-play' src='{{audio_play_img}}' bindtap='readWord'></image>
+        </view>
+        <view class='voice_desp' wx:if='{{currentData > 0 }}'>
+          <text class='voice-txt'>{{vowel_desp}}</text>
+        </view>
+    </view>
+  </view>
+
+  <view class='next-view'>
+    <button class='pre-btn' bindtap='preStep'>上一步</button>
+    <button class='next-btn' bindtap='nextStep'>下一步</button>
+  </view>
+</view>

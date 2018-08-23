@@ -1,0 +1,35 @@
+<swiper indicator-dots="{{indicatorDots}}" class='swiper-view'
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{banner}}"  wx:key="id" wx:for-item="item">
+      <swiper-item>
+          <image src="{{item.simg}}" class="slide-image" mode='widthFix' bindtap='banner' data-sid='{{item.sid}}' data-item='{{item}}'/>
+      </swiper-item>
+    </block>
+</swiper>
+
+<view>
+  <view class='model-line-view'>
+    
+    <view class='top-left'>
+      <image src='../../images/vowel_icon.png' bindtap='vowelLearn'></image>
+       <button class='login-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-type='1'></button>
+    </view>
+    <view class='top-right'>
+      <image src='../../images/consonant_icon.png' bindtap='consonant'></image>
+      <button class='login-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-type='2'></button>
+    </view>
+  </view>
+  <view class='model-line-view'>
+    <view class='top-left'>
+      <image src='../../images/course_icon.png' bindtap='weike'></image>
+      <button class='login-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-type='3'></button>
+    </view>
+    <view class='top-right'>
+      <image src='../../images/phonetic_icon.png' bindtap='vowelDesp'></image>
+      <button class='login-btn' wx:if='{{canIUse && !is_login}}' open-type="getUserInfo" bindgetuserinfo='onGotUserInfo' data-type='4'></button>
+    </view>
+  </view>
+</view>
+<view class='bottom-view'>
+  <image class='solgan-img' src='../../images/home_solgan.png'></image>
+</view>

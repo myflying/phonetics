@@ -1,0 +1,133 @@
+/* pages/home/home.wxss */
+@import "../price_dialog/price_dialog.wxss";
+
+page {
+  width:  100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f8f8f8;
+}
+
+.top-view {
+  width: 690rpx;
+  height: 120rpx;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.top-img {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 48rpx;
+}
+
+.top-txt {
+  font-size: 14pt;
+  color: #30c065;
+  margin-right: 48rpx;
+  font-weight: 600;
+}
+
+.vowel-warpper {
+  width: 690rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.vowel-name {
+  width: 252rpx;
+  height: 68rpx;
+  background-color: #eeeeee;
+  text-align: center;
+  border-radius: 12px;
+  font-size: 12pt;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vowel-item {
+  width: 690rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 10px;
+  justify-content: flex-start;
+}
+
+.vowel-letter {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vowel-warpper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.letter-txt {
+  width: 128rpx;
+  height: 128rpx;
+  text-align: center;
+  margin: 25rpx;
+  background: #ccefca;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.vowel-show {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.vip-img {
+  width: 82rpx;
+  height: 38rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.letter-compare {
+  width: 128rpx;
+  height: 128rpx;
+  text-align: center;
+  margin: 25rpx;
+  background: #feeded;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.vip-compare-img {
+  width: 82rpx;
+  height: 38rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
